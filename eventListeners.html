@@ -1,0 +1,105 @@
+<DOCTYPE html>
+
+    <html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style.css">
+
+        <title>DOM Events</title>
+
+    </head>
+
+    <header>
+        <h1>Use your mouse and keyboard to trigger events. Check the console for nitty gritty details.</h1>
+    </header>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-8 column">
+                    <main>
+                        <code>&lt;main&gt;</code>
+                        <h3>Here's a header
+                            <code class="codeLabel">&lt;h3&gt;</code>
+                        </h3>
+                        <p>
+                            Here's a paragraph
+                            <code class="codeLabel">&lt;p&gt;</code>
+                        </p>
+
+                        <form>
+                            <code>&lt;form&gt;</code>
+
+                            <section>
+                                <input type="text" placeholder="Get a taste for input events">
+                                <code class="codeLabel">&lt;input&gt;</code>
+                            </section>
+                            <section>
+                                <select>
+                                    <option value="1">Events are fun!</option>
+                                    <option value="2">Events are OK, I guess...</option>
+                                    <option value="2">F@$# events!</option>
+                                </select>
+                                <code class="codeLabel">&lt;select&gt;</code>
+                            </section>
+                            <section>
+                                <textarea placeholder=""></textarea>
+                                <code class="codeLabel">&lt;textarea&gt;</code>
+                            </section>
+                            <section>
+                                <button type="submit">Submit</button>
+                                <code class="codeLabel">&lt;button&gt;</code>
+                            </section>
+
+
+                        </form>
+
+                        <section>
+                            <img src="https://i.pinimg.com/736x/81/e2/4c/81e24c8567ce0530fa3fb42f3bcc5ceb--teaching-memes-work-memes.jpg">
+                            <code class="codeLabel">&lt;img&gt;</code>
+                        </section>
+                        <section>
+                            <video src="bigbuckbunny.mp4" type="video/mp4" controls></video>
+                            <code class="codeLabel">&lt;video&gt;</code>
+                        </section>
+
+
+
+                    </main>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 column eventLogCont">
+                    <h6 id="filterContainerToggle">Toggle Listeners</h6>
+                    <div class="filterContainer">
+                        <ul class="filterSection" id="selectorFilters">
+                        </ul>
+                        <hr>
+                        <ul class="filterSection" id="eventFilters">
+                        </ul>
+
+                    </div>
+                    <ul id="eventLog"></ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!--=============== JavaScript ===============-->
+        <script src="scripts.js"></script>
+
+
+    </body>
+
+    </html>

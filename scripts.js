@@ -1,11 +1,11 @@
 //=== Populate localStorage with above defaults if empty ===//
 if (!localStorage.getItem("eventSettings")) {
-  const eventDefaults = defaultSettings.getEventDefaults();
+  const eventDefaults = settings.getEventDefaults();
   localStorage.setItem("eventSettings", JSON.stringify(eventDefaults));
 }
 
 if (!localStorage.getItem("targetSettings")) {
-  const targetDefaults = defaultSettings.getTargetDefaults();
+  const targetDefaults = settings.getTargetDefaults();
   localStorage.setItem("targetSettings", JSON.stringify(targetDefaults));
 }
 
@@ -13,8 +13,8 @@ if (!localStorage.getItem("targetSettings")) {
 const eventOptions = getLocalEventSettings();
 const targetOptions = getLocalTargetSettings();
 
-populateListenerFilters(eventOptions, "event");
-populateListenerFilters(targetOptions, "target");
+settings.populateListenerOptions(eventOptions, "event");
+settings.populateListenerOptions(targetOptions, "target");
 
 //====== Add listeners at initial page load if active =====//
 targetOptions.forEach(target => {
@@ -151,24 +151,4 @@ function getLocalEventSettings() {
 
 function getLocalTargetSettings() {
   return JSON.parse(localStorage.getItem("targetSettings"));
-}
-
-function populateListenerFilters(options, type) {
-  options.forEach(option => {
-    const optionToggleButton = document.createElement("li");
-    optionToggleButton.classList.add("toggleButton");
-    optionToggleButton.innerHTML = option.name;
-
-    if (option.isActive) {
-      optionToggleButton.classList.add("activeFilter");
-    }
-
-    type === "event"
-      ? document.getElementById("eventFilters").appendChild(optionToggleButton)
-      : document
-          .getElementById("targetFilters")
-          .appendChild(optionToggleButton);
-  });
-
-  return;
 }

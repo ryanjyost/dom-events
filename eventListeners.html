@@ -20,9 +20,9 @@
 
     </head>
 
-    <header>
+    <!-- <header>
         <h1>Use your mouse and keyboard to trigger events. Check the console for nitty gritty details.</h1>
-    </header>
+    </header> -->
 
     <body>
         <div class="container-fluid">
@@ -31,13 +31,17 @@
                 <div class="col-xs-12 col-sm-8 column">
                     <main>
                         <code>&lt;main&gt;</code>
-                        <h3>Here's a header
+                        <h3>Use your mouse and keyboard to trigger events.
                             <code class="codeLabel">&lt;h3&gt;</code>
                         </h3>
                         <p>
-                            Here's a paragraph
+                            Toggle listeners on the right. Check the browser console for nitty gritty details.
                             <code class="codeLabel">&lt;p&gt;</code>
                         </p>
+                        <a href="https://github.com/ryanjyost/dom-events" target="_blank">
+                            New feature idea? Bug? Issue? Check out the repo - beginner friendly open-source project!
+                            <code class="codeLabel">&lt;a&gt;</code>
+                        </a>
 
                         <form>
                             <code>&lt;form&gt;</code>
@@ -81,13 +85,17 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-4 column eventLogCont">
-                    <h6 id="filterContainerToggle">Toggle Listeners</h6>
+                    <button id="filterContainerToggle">Settings</button>
                     <div class="filterContainer">
-                        <ul class="filterSection" id="selectorFilters">
-                        </ul>
+                        <button id="filterAllOn" class="filterButton">Select All</button>
+                        <button d="filterAllOff" class="filterButton">Deselect All</button>
                         <hr>
                         <ul class="filterSection" id="eventFilters">
                         </ul>
+                        <hr>
+                        <ul class="filterSection" id="targetFilters">
+                        </ul>
+
 
                     </div>
                     <ul id="eventLog"></ul>
@@ -97,7 +105,9 @@
 
 
         <!--=============== JavaScript ===============-->
+        <script src="defaultSettings.js"></script>
         <script src="scripts.js"></script>
+
 
 
     </body>

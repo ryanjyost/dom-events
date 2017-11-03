@@ -85,15 +85,15 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-4 column eventLogCont">
-                    <button id="filterContainerToggle">Settings</button>
-                    <div class="filterContainer">
-                        <button id="filterAllOn" class="filterButton">Select All</button>
-                        <button d="filterAllOff" class="filterButton">Deselect All</button>
+                    <button id="settingsContainerToggle">Settings</button>
+                    <div class="settingsContainer">
+                        <button id="settingsAllOn" class="settingsButton">Select All</button>
+                        <button id="settingsAllOff" class="settingsButton">Deselect All</button>
                         <hr>
-                        <ul class="filterSection" id="eventFilters">
+                        <ul class="settingsSection" id="eventSettings">
                         </ul>
                         <hr>
-                        <ul class="filterSection" id="targetFilters">
+                        <ul class="settingsSection" id="targetSettings">
                         </ul>
 
 
@@ -105,6 +105,7 @@
 
 
         <!--=============== JavaScript ===============-->
+        <script src="handleEvent.js"></script>
         <script src="settings.js"></script>
         <script src="scripts.js"></script>
 

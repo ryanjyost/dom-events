@@ -178,26 +178,6 @@ video {
   -webkit-animation-timing-function: ease-in-out;
 }
 
-#filterContainerToggle {
-  color: #585858;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  background-color: #f2f2f2;
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
-  margin: auto;
-  border: 1px solid #d8d8d8;
-  width: 90%;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  -webkit-box-shadow: 0px 4px 9px -1px rgba(164, 164, 164, 1);
-  -moz-box-shadow: 0px 4px 9px -1px rgba(164, 164, 164, 1);
-  box-shadow: 0px 4px 9px -1px rgba(164, 164, 164, 1);
-}
-
 #eventLog {
   list-style-type: none;
   padding: 10px;
@@ -224,19 +204,55 @@ video {
 
 /* Filter Lists */
 
-.filterContainer {
+#settingsContainerToggle {
+  color: #585858;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  background-color: #f2f2f2;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  margin: auto;
+  border: 1px solid #d8d8d8;
+  width: 90%;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0px 2px 9px -1px rgba(164, 164, 164, 1);
+  -moz-box-shadow: 0px 2px 9px -1px rgba(164, 164, 164, 1);
+  box-shadow: 0px 2px 9px -1px rgba(164, 164, 164, 1);
+}
+
+#settingsContainerToggle:hover {
+  background-color: #f7f7f7;
+}
+
+#settingsContainerToggle:focus {
+  outline: none !important;
+}
+
+.settingsContainer {
   background-color: #fafafa;
   border: 1px solid #d8d8d8;
   padding: 10px 2.5%;
+  display: block;
 }
 
-.filterButton {
+.settingsButton {
   display: inline-block;
-  width: 47.5%;
+  width: 40%;
+  margin: 0px 4%;
   background-color: #f2f2f2;
   color: #a4a4a4;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: 0px 2px 6px -1px rgba(164, 164, 164, 1);
+  -moz-box-shadow: 0px 2px 6px -1px rgba(164, 164, 164, 1);
+  box-shadow: 0px 2px 6px -1px rgba(164, 164, 164, 1);
+}
+
+.settingsButton:hover {
+  background-color: #f7f7f7;
 }
 
 hr {
@@ -246,7 +262,7 @@ hr {
   margin-bottom: 10px;
 }
 
-.filterSection {
+.settingsSection {
   list-style-type: none;
 }
 
@@ -260,12 +276,15 @@ hr {
 }
 
 .toggleButton:hover {
-  background-color: #b84545;
-  color: #fff;
+  background-color: #fff;
   cursor: pointer;
 }
 
-.activeFilter {
+.active {
   color: #fff !important;
+  background-color: #b84545 !important;
+}
+
+.active:hover {
   background-color: #b84545 !important;
 }

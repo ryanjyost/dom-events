@@ -41,6 +41,8 @@ form.addEventListener("submit", e => {
   e.preventDefault();
 });
 
+//change to make first commit
+
 // document
 //   .getElementById("settingsAllOn")
 //   .addEventListener("click", turnAllOptionsOn);

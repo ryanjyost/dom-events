@@ -119,7 +119,7 @@ const settings = (function() {
       e.target.classList.remove("active");
 
       //update localStorage settings
-      settings.updateLocalStorage(toggleOption);
+      updateLocalStorage(toggleOption);
 
       //remove listeners
       if (toggleOption.type === "event") {
@@ -157,7 +157,7 @@ const settings = (function() {
       e.target.classList.add("active");
 
       //update localStorage settings
-      settings.updateLocalStorage(toggleOption);
+      updateLocalStorage(toggleOption);
 
       //add listeners
       if (toggleOption.type === "event") {
@@ -195,22 +195,22 @@ const settings = (function() {
     const eventDefaults = [
       {
         name: "blur",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "change",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "click",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "contextmenu",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
@@ -220,12 +220,12 @@ const settings = (function() {
       },
       {
         name: "dblclick",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "focus",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
@@ -240,7 +240,7 @@ const settings = (function() {
       },
       {
         name: "input",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
@@ -250,7 +250,7 @@ const settings = (function() {
       },
       {
         name: "keypress",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
@@ -265,7 +265,7 @@ const settings = (function() {
       },
       {
         name: "mousedown",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
@@ -295,47 +295,47 @@ const settings = (function() {
       },
       {
         name: "mouseup",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "play",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "reset",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "scroll",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "seeked",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "seeking",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "select",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "storage",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
         name: "submit",
-        isActive: true,
+        isActive: false,
         type: "event"
       },
       {
@@ -345,7 +345,7 @@ const settings = (function() {
       },
       {
         name: "volumechange",
-        isActive: true,
+        isActive: false,
         type: "event"
       }
     ];
@@ -359,7 +359,7 @@ const settings = (function() {
     const targetDefaults = [
       {
         name: "window",
-        isActive: false,
+        isActive: true,
         type: "target"
       },
       {
@@ -368,58 +368,63 @@ const settings = (function() {
         type: "target"
       },
       {
-        name: "main",
-        isActive: true,
+        name: "body",
+        isActive: false,
         type: "target"
       },
       {
-        name: "h3",
-        isActive: true,
+        name: "main",
+        isActive: false,
+        type: "target"
+      },
+      {
+        name: "h1",
+        isActive: false,
         type: "target"
       },
       {
         name: "p",
-        isActive: true,
+        isActive: false,
         type: "target"
       },
       {
         name: "a",
-        isActive: true,
+        isActive: false,
         type: "target"
       },
       {
         name: "form",
-        isActive: true,
+        isActive: false,
         type: "target"
       },
       {
         name: "input",
-        isActive: true,
+        isActive: false,
         type: "target"
       },
       {
         name: "textarea",
-        isActive: true,
+        isActive: false,
         type: "target"
       },
       {
         name: "select",
-        isActive: true,
+        isActive: false,
         type: "target"
       },
       {
         name: "button",
-        isActive: true,
+        isActive: false,
         type: "target"
       },
       {
         name: "video",
-        isActive: true,
+        isActive: false,
         type: "target"
       },
       {
         name: "img",
-        isActive: true,
+        isActive: false,
         type: "target"
       }
     ];

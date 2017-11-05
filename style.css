@@ -31,6 +31,12 @@ main {
   width: 100%;
 }
 
+.twitter-share-button,
+.twitter-follow-button {
+  float: right;
+  margin: 0px 2%;
+}
+
 .codeLabel {
   float: right;
 }
@@ -67,15 +73,15 @@ p {
 }
 
 main a {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   border: 1px solid #d8d8d8;
   padding: 10px;
   border-radius: 5px;
   background-color: #f7f7f7;
-  display: block;
+  display: inline-block;
   width: 100%;
-  margin-bottom: 20px;
-  cursor: pointer;
+  margin: pointer;
 }
 
 form {

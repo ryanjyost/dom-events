@@ -32,7 +32,8 @@ main {
 }
 
 .twitter-share-button,
-.twitter-follow-button {
+.twitter-follow-button,
+.github-button {
   float: right;
   margin: 0px 2%;
 }
